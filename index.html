@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Single Price Grid Component</title>
+ <style>
+  @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');/*400-700*/
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Light-Cyan: hsl(179, 78%, 47%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Karla', serif;
+    background-color: var(--Light-Gray);
+}
+
+.cards-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-shadow {
+    box-shadow: 0px 3px 10px  rgba(63, 63, 63, 0.55);
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+.first {
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1rem 2.1rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+.first h2 {
+    color: var(--Cyan);
+}
+
+.first h3 {
+    color: var(--Bright-Yellow);
+    height: 12px;
+    letter-spacing: -1px;
+}
+
+.first p {
+    color: var(--Grayish-Blue);
+    line-height: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.bottom-cards {
+    display: flex
+}
+
+.second {
+    width: 300px;
+    height: 240px;
+    background-color: var(--Cyan);
+    box-sizing: border-box;
+    padding: 1rem 2.1rem;
+    border-bottom-left-radius: 0.4rem;
+}
+
+.second h3 {
+    color: white;
+}
+
+.price {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.price-p {
+    color: var(--Light-Gray);
+}
+
+.price h3 {
+    font-size: 2rem;
+}
+
+.second-p {
+    color: white;
+    font-size: 0.95rem;
+    line-height: 0.8rem;
+}
+
+.third {
+    width: 300px;
+    height: 240px;
+    background-color: #49BEBD;
+    box-sizing: border-box;
+    padding: 1rem 2.1rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+.third h2 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.third p {
+    color: var(--Light-Gray);
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.btn {
+    font-family: 'Karla', serif;
+    margin-top: 0.7rem;
+    font-size: 0.9rem;
+    width: 98%;
+    color: white;
+    font-weight: 700;
+    border: none;
+    background-color: var(--Bright-Yellow);
+    padding: 0.87rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 0px 3px 10px  rgba(63, 63, 63, 0.55);
+    cursor: pointer;
+}
+
+@media(max-width: 610px) {
+    .cards-container {
+        margin: 1rem 0;
+        height: auto;
+    }
+    
+    .first,
+    .second,
+    .third {
+        width: 300px;
+        height: 240px;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .first h2 {
+        font-size: 1.2rem;
+    }
+
+    .first h3 {
+        font-size: 1rem;
+    }
+
+    .first p {
+        margin-top: 2.4rem;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+
+    .second {
+        border-bottom-left-radius: 0;
+    }
+
+    .third {
+        border-bottom-left-radius: 0.4rem;
+    }
+    
+    .bottom-cards {
+        flex-direction: column;
+    }
+}
+
+ </style>
+
+<body>
+  <main>
+    <div class="cards-container">
+      <div class="container-shadow">
+        <div class="first">
+          <h2>Join our community</h2>
+          <h3>30-day, hassle-free money back guarantee</h3>
+          <p>Gain access to our full library of tutorials along with expert code reviews.
+            Perfect for any developers who are serious about honing their skills.</p>
+        </div>
+        <div class="bottom-cards">
+          <div class="second">
+            <h3>Monthly Subscription</h3>
+            <div class="price">
+              <h3>&dollar;29</h3>
+              <p class="price-p">per month</p>
+            </div>
+            <p class="second-p">Full access for less than &dollar;1 a day</p>
+            <button class="btn">Sign Up</button>
+          </div>
+          <div class="third">
+            <h2>Why Us</h2>
+            <p>
+              Tutorials by industry experts<br>
+              Peer &amp; expert code review<br>
+              Coding exercises<br>
+              Access to our GitHub repos<br>
+              Community forum<br>
+              Flashcard decks<br>
+              New videos every week
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
